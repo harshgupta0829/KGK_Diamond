@@ -1,13 +1,11 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:kgk_diamonds/models/diamonds.dart';
-import '../data/data.dart'; // Import the data.dart file
+import '../data/data.dart';
 
 class DiamondBloc extends Cubit<List<Diamond>> {
   DiamondBloc() : super([]);
 
-  // Rename the function to avoid conflict
   void loadDiamondData() async {
-    // final diamonds = await loadDiamonds(); // Call the function from data.dart
     emit(diamonds);
   }
 

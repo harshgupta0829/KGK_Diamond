@@ -1,33 +1,4 @@
-import 'package:csv/csv.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:kgk_diamonds/models/diamonds.dart';
-
-// Future<List<Diamond>> loadDiamonds() async {
-//   final csvData = await rootBundle.loadString('assets/diamonds.csv');
-//   final rows = const CsvToListConverter().convert(csvData);
-//
-//   // Skip the header row and map the data to Diamond objects
-//   return rows.skip(1).map((row) {
-//     return Diamond(
-//       lotId: row[4].toString(),
-//       size: double.parse(row[5].toString()),
-//       carat: double.parse(row[6].toString()),
-//       lab: row[7].toString(),
-//       shape: row[8].toString(),
-//       color: row[9].toString(),
-//       clarity: row[10].toString(),
-//       cut: row[11].toString(),
-//       polish: row[12].toString(),
-//       symmetry: row[13].toString(),
-//       fluorescence: row[14].toString(),
-//       discount: double.parse(row[15].toString()),
-//       perCaratRate: double.parse(row[16].toString().replaceAll(',', '')),
-//       finalAmount: double.parse(row[17].toString().replaceAll(',', '')),
-//       keyToSymbol: row[18].toString(),
-//       labComment: row[19].toString(),
-//     );
-//   }).toList();
-// }
 
 final List<Diamond> diamonds = [
   Diamond(

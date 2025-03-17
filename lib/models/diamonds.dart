@@ -35,7 +35,6 @@ class Diamond {
     required this.labComment,
   });
 
-  // Factory constructor to create a Diamond object from JSON
   factory Diamond.fromJson(Map<String, dynamic> json) {
     return Diamond(
       lotId: json['lotId'],
@@ -57,7 +56,6 @@ class Diamond {
     );
   }
 
-  // Method to convert a Diamond object to JSON
   Map<String, dynamic> toJson() {
     return {
       'lotId': lotId,

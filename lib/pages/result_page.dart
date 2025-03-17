@@ -9,7 +9,7 @@ class ResultPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF5F5F5), // Light grey background
+      backgroundColor: Color(0xFFF5F5F5),
       appBar: AppBar(
         title: Text(
           'Filtered Diamonds',
@@ -24,7 +24,6 @@ class ResultPage extends StatelessWidget {
         elevation: 0,
         iconTheme: IconThemeData(color: Colors.white),
         actions: [
-          // Sorting PopupMenuButton
           PopupMenuButton<String>(
             icon: Icon(Icons.sort, color: Colors.white),
             onSelected: (value) {
@@ -65,7 +64,6 @@ class ResultPage extends StatelessWidget {
               ),
             ],
           ),
-          // Cart Icon with Badge
           BlocBuilder<CartBloc, List<Diamond>>(
             builder: (context, cart) {
               return badges.Badge(
@@ -83,7 +81,7 @@ class ResultPage extends StatelessWidget {
               );
             },
           ),
-          SizedBox(width: 10), // Add spacing
+          SizedBox(width: 10),
         ],
       ),
       body: BlocBuilder<DiamondBloc, List<Diamond>>(
